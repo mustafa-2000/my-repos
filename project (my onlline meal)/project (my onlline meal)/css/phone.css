@@ -1,0 +1,45 @@
+@media screen and (max-width : 932px) {
+    .nav {
+        flex-direction: column;
+        height: 220px;
+    }
+
+    .logo img {
+        margin: 20px 0px;
+    }
+
+    .navitems ul li a{
+        font-size: 18px;
+        padding: 8px 5px;
+    }
+
+    .home {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80vw;
+        height: 480px;
+        margin: 10px 0px;
+    }
+
+    .cardimg img{
+        width: 150px;
+    }
+    .cardimgdel img{
+        width: 95px;
+    }
+
+    .myform input , textarea , .btn button{
+        width: 70vw;
+        font-size: 20px;
+        padding: 4px 4px;
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,246 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+  
+  display: flex; 
+   background-color:rgb(119, 34, 34);
+    width: 100% ;
+    height: 110px ;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.logo img{
+    width: 90px;
+    margin:0px 60px ;
+}
+.navitems ul{
+    display:flex;
+}
+.navitems ul li{
+    list-style: none;
+}
+.navitems ul  li a{
+    text-decoration:none ;   
+    padding:10px 20px ;
+    color: white;
+    font-size: 25px ;
+    font-weight: bold;
+}
+.navitems ul li a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+}
+
+/* home section strat */
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 85vh;
+    font-family: 'Times New Roman', Times, serif;
+    background-image:url(../img2/food.jpg.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(142, 36, 36);
+}
+.description h1{
+    padding: 22px 0px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.description p{
+    padding: 8px 0px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.orderbtn{
+     background-color: rgb(216, 99, 99);
+     color: white;
+     border: 3px solid white;
+     padding: 4px 8px;
+     font-size:22px ;
+      cursor: pointer;
+      border-radius: 8px;
+}
+.orderbtn:hover{
+    background-color: white;
+    color: brown;
+    border-color: brown;
+}
+/* services section is start */
+.services{
+   display: flex;
+    width: 100%;
+    margin: 0px 0px;
+    padding:  40px ;
+    background-size: cover;
+    background-color: rgb(235, 210, 210);
+
+
+}
+.servicesh{
+    text-align: center;
+    margin: 0px 0px;
+    padding: 50px ;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(235, 210, 210);
+    color: brown;
+}
+
+.card{
+    /* width: 30vw; */
+    /* height: 420px; */
+    border: 2px solid brown;
+    border-radius: 29px;
+    background-color: rgb(206, 236, 198);
+    border-radius: 29px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+}
+.cardimg img{
+    width: 250px;
+    margin-top: 30px;
+}
+.cardimgdel img{
+    margin-top: 25px;
+    width: 150px;
+}
+.carddesc{
+    padding:20px;
+}
+.carddesc h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: brown;
+}
+.carddesc p{
+    text-align: center;
+    font-weight: bold;
+    line-height:150%;
+    color: brown;
+}
+/* client section start */
+.client{
+    margin-top: 40px;
+    text-align: center;
+    /* background: url("../img/foodbck1.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.client h1{
+    text-align: center;
+    margin: 0px 0px;
+    padding: 50px ;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(241, 187, 187);
+    color: brown;
+}
+.clientItems img{
+    width: 250px;
+    padding: 20px 30px;
+    background-color: rgb(241, 187, 187) ;
+    /* background-color: black; */
+}
+.clientItems img{
+    transition: all 1s;
+}
+.clientItems img:hover{
+    transform: scale(0.8);
+}
+.clientItems{
+    background-color: rgb(241, 187, 187);
+    /* background-image: url(../img/contact.webp); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+/* contact section  */
+ .contact{
+    width:100% ;
+    height:70vh ;
+    /* background-image: url("../img/contact.webp"); */
+    background-color: rgb(232, 163, 163);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 25px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    color: brown;
+}
+.myform{
+    padding-bottom: 28px;
+}
+.myform label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.myform input , textarea , .btn button{
+    width: 45vw;
+    font-size: 20px;
+    padding: 4px 4px;
+    border-radius: 8px;
+}
+.btn button{
+    width: 45vw;
+    font-size: 20px;
+    background-color: rgb(247, 246, 246);
+    border-color: black;
+    color: brown;
+    padding: 4px 4px;
+    border-radius: 8px;
+}
+.btn button{
+    cursor: pointer;
+}
+/* footer section start */
+footer{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 8px 0px;
+} 
+/* paragraph animation */
+.description p{
+    animation: textSlide 1s ease-in-out forwards ;
+}
+@keyframes textSlide {
+    from{
+        transform: translateX(-110px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+    
+} 

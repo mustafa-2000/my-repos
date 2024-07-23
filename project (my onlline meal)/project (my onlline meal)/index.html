@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="./CSS/style.css"> -->
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/phone.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <title>Best Online Food Delivery Service</title>
+    </head>
+
+    <body>
+        <!-- Navbar start -->
+
+        <div class="nav" id="nav">
+            <div class="logo">
+                <img src="./img/logo1.png" alt="logo">
+            </div>
+            <div class="navitems">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#client">Our Client</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Home section start -->
+        <section class="home" id="home">
+            <div class="description">
+                <h1 class="heading">Welcome To My Online Meal<span
+                        class="heading"></span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Consectetur beatae atque minima et rem explicabo tempora
+                    quis doloremque cumque harum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusamus, voluptatibus assumenda. Labore.</p>
+            </div>
+            <div>
+                <button class="orderbtn">Order now</button>
+            </div>
+        </section>
+
+        <!-- Our Services  -->
+        <h1 class="servicesh">Our Services</h1>
+        <section class="services" id="services">
+            <div class="card" data-aos="fade-right">
+                <div class="cardimg">
+                    <img src="./img/biryani.jpg" alt="cardimg">
+                </div>
+                <div class="carddesc">
+                    <h3>Food Catring</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium blanditiis quasi delectus molestias ratione
+                        ipsam magni similique saepe sunt quae cumque aliquid
+                        expedita sapiente fuga rem optio provident alias
+                        deserunt officiis sit at tempore sint, obcaecati labore.
+                        Rerum veritatis dolorum, debitis repellendus dolor
+                        praesentium ipsa.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="flip-left">
+                <div class="cardimg">
+                    <img src="./img2/pizza-3010062_1280.jpg" alt="cardimg">
+                </div>
+                <div class="carddesc">
+                    <h3>Bulk Ordering</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium blanditiis quasi delectus molestias ratione
+                        ipsam magni similique saepe sunt quae cumque aliquid
+                        expedita sapiente fuga rem optio provident alias
+                        deserunt officiis sit at tempore sint, obcaecati labore.
+                        Rerum veritatis dolorum, debitis repellendus dolor
+                        praesentium ipsa.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <div class="cardimgdel">
+                    <img src="./img/delivery.jpg" alt="cardimg">
+                </div>
+                <div class="carddesc">
+                    <h3>Food Ordering</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium blanditiis quasi delectus molestias ratione
+                        ipsam magni similique saepe sunt quae cumque aliquid
+                        expedita sapiente fuga rem optio provident alias
+                        deserunt officiis sit at tempore sint, obcaecati labore.
+                        Rerum veritatis dolorum, debitis repellendus dolor
+                        praesentium ipsa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client section start -->
+        <section id="client" class="client">
+            <h1>Our Client</h1>
+            <div class="clientItems">
+                <img src="./img/hplogo.png" alt>
+                <img src="./img/skypelogo.png" alt>
+                <img src="./img/applelogo.png" alt>
+                <img src="./img/microsoft.png" alt>
+            </div>
+        </section>
+
+        <!--Contact us Section  -->
+        <section class="contact" id="contact">
+            <h1>Contact Us</h1>
+            <form action class="myform">
+                <div>
+                    <label for>Name : </label>
+                    <br>
+                    <input type="text" name="name" id="name"
+                        placeholder="Enter Your Name">
+                </div>
+                <div>
+                    <label for>Email : </label>
+                    <br>
+                    <input type="email" name="email" id="email"
+                        placeholder="Enter Your Email">
+                </div>
+                <div>
+                    <label for>Phone : </label>
+                    <br>
+                    <input type="tel" name="phone" id="phone"
+                        placeholder="Enter Your Phone">
+                </div>
+                <div>
+                    <label for>Message : </label>
+                    <br>
+                    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+                </div>
+                <div class="btn">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Footer section start -->
+        <footer>
+            Copyright © www.MyOnlineMeals.com all right reserved!
+        </footer>
+        <!-- AOS cdn -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- typed.js cdn -->
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <!-- Setup and start animation! -->
+        <script>
+    var typed = new Typed('.heading', {
+      strings: ["Welcome To My Online Meal", 'Welcome To My Catering Service and enjoy'],
+      typeSpeed: 100,
+      loop: true,
+      backSpeed: 40,
+    });
+
+    AOS.init({offset: 300,
+        delay: 1, 
+        duration: 400,
+        easing: 'ease'
+    });
+  </script>
+
+    </body>
+</html>
