@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>card</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body> 
+    <!-- navbar -->              
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <h1><i class=" fa-solid fa-leaf"></i> <span class="">Alpha  </span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <p data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="  position-relative me-3">
+                    <i class="display-6 fa-solid fa-cart-shopping"></i>
+                    <span
+                        class="cartlen position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </p>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">My cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                
+                    </ol>
+                    <h4 class="my-3">Total : Rs <span id="Total"></span></h4>
+                    <button id="clearcart" onclick="clearcart()" class="btn btn-primary">Clear cart</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- product -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2">
+                <div class="card">
+                    <img src="https://www.bell.ca/Styles/wireless/all_languages/all_regions/catalog_images/large/iPhone_15_Pro_Max_Natural_Titanium_lrg2.png"
+                        alt="">
+                    <h5 class="text-center">IPhone 15 Pro Max</h5>
+                    <p class="text-center">Rs 80000</p>
+                    <button class="  mx-2  my-2 btn btn-primary">Add TO Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var products = [
+            {
+                id: 1,
+                name: "Iphone 15 pro max",
+                price: 450000,
+                link: "https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-15-pro-max-blue-titanium.png?v=9166c13e ",
+                quantity: 6,
+            },
+            {
+                id: 2,
+                name: "Iphone 15 pro ",
+                price: 325000,
+                link: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1695113801-apple-iphone-15-pro-lineup-white-titanium-twitter-650961d6e60d6.jpg?crop=1xw:1xh;center,top&resize=980:* ",
+                quantity: 2,
+            },
+            {
+                id: 3,
+                name: "Iphone 15",
+                price:260000,
+                link: "https://rebeltech.pk/wp-content/uploads/2023/09/LD0006064129_0006064154_0006064183.jpg ",
+                quantity: 5,
+            },
+            {
+                id: 4,
+                name: "Iphone 14 pro max",
+                price: 374000,
+                link: "https://images.priceoye.pk/apple-iphone-14-pro-max-pakistan-priceoye-4hr9p.jpg ",
+                quantity: 7,
+            },
+            {
+                id: 5,
+                name: "Samsung Galaxy S24 Ultra",
+                price: 435000,
+                link: " https://qmart.pk/cdn/shop/files/Samsung_Galaxy-S24-Ultra-Qmart-7_2048x2048.jpg?v=1705758300",
+                quantity: 4,
+            },
+            {
+                id: 6,
+                name: "Samsung Galaxy Z Fold 5",
+                price: 560000,
+                link: "https://images.samsung.com/is/image/samsung/p6pim/pk/sm-f946blbdpkd/gallery/pk-galaxy-z-fold5-f946-472130-sm-f946blbdpkd-thumb-538237448 ",
+                quantity: 10,
+            },
+            {
+                id: 7,
+                name: "Samsung Galaxy Z Flip 5",
+                price: 360000,
+                link: " https://www.phoneplacekenya.com/wp-content/uploads/2023/07/Samsung-Galaxy-Z-Flip-5-c.jpg",
+                quantity: 10,
+            },
+            {
+                id: 7,
+                name: "Samsung Galaxy A25",
+                price: 90000,
+                link: "https://d1rlzxa98cyc61.cloudfront.net/catalog/product/cache/1801c418208f9607a371e61f8d9184d9/1/9/190811_2023.jpg ",
+                quantity: 10,
+            },
+            {
+                id: 8,
+                name: "Google Pixel 8 pro ",
+                price: 289000,
+                link: " https://qmart.pk/cdn/shop/files/Google-Pixel-8-Pro-Qmart-5_71b51287-b4ba-4f5e-ad38-fe9d98474871.jpg?v=1698133939",
+                quantity: 10,
+            },
+            {
+                id: 9,
+                name: "Google pixel 7",
+                price: 190000,
+                link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC4WYMDJwDn6Sp3EunoNEKZ4EubYupumZHy5lDdLLkoUctpL2vJ8cWbGxsaaiQzthsrBw&usqp=CAU ",
+                quantity: 10,
+            },
+            {
+                id: 10,
+                name: "Infinix Hot 40 Pro",
+                price:45000 ,
+                link: "https://d1iv6qgcmtzm6l.cloudfront.net/products/lg_xqyIhvYfE02pPavNCcLb9BjiWwxvjHQwvjJeOoeX.jpg ",
+                quantity: 10,
+            },
+            {
+                id: 11,
+                name: "Infinix Not 30",
+                price: 45000,
+                link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3AiOzI_Txikqo1kM3pR5iE8vIAskd9-THTD5Tjb-QyQ&s",
+                quantity: 10,
+            },
+            {
+                id: 12,
+                name: "OnePlus 12",
+                price: 265000,
+                link: "https://tradingshenzhen.com/13897-large_default/oneplus-12-24gb1tb.jpg ",
+                quantity: 10,
+            },
+            {
+                id: 13,
+                name: "OnPlus 10 pro",
+                price: 182000,
+                link: "https://cellmart.pk/wp-content/uploads/2022/04/safsfd.jpg ",
+                quantity: 10,
+            },
+            {
+                id: 14,
+                name: "OnePlus Nord 3",
+                price:167000 ,
+                link: "https://oasis.opstatics.com/content/dam/oasis/page/2023/global/product/vitamin/vitamin-spec-black.png ",
+                quantity: 10,
+            },
+            {
+                id: 15,
+                name: "Vivo V30",
+                price:139000 ,
+                link: " https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1709796027386/c040406a6451908ad854de582f968883.png",
+                quantity: 10,
+            },
+            
+
+
+        ]
+        var str = "";
+        products.forEach(function(data, index) {
+            str = str + `
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-2">
+                <div class="card">
+                    <img style = "hight:280px"
+                    src=${data.link} alt>
+                    <h5 class="text-center">${data.name}</h5>
+                    <p class="text-center">Rs ${data.price}</p>
+                    <button onclick='addToCart(${index} , ${JSON.stringify(data.name)} , ${data.price} , 1)' class=" mx-2  my-2 btn btn-primary">Add TO Cart</button>
+                </div>
+            </div>
+                    
+                    `
+        })
+
+        document.querySelector('.row').innerHTML = str;
+
+        let cart = [];
+        let Total= 0;
+        document.querySelector('.cartlen').innerHTML = 0;
+
+        function addToCart(index, name, price, qty) {
+            cart = JSON.parse(localStorage.getItem("cart"));
+            Total =JSON.parse(localStorage.getItem("Total"));
+            if(cart == null || Total == null){
+                cart = [];
+                Total = 0;
+            }
+            let existingItem = cart.find((data)=>data.name === name) ;
+            if(existingItem){
+                existingItem.qty = existingItem.qty + 1 ;
+                Total = Total + price;
+                localStorage.setItem("cart" , JSON.stringify(cart));
+                localStorage.setItem("Total" , JSON.stringify(Total));
+                updateCart();
+
+            }
+            else{
+                cart.push({ name, price, qty });
+                localStorage.setItem("cart" , JSON.stringify(cart));
+                Total = Total + price;
+    
+                localStorage.setItem("Total" , JSON.stringify(Total));
+                updateCart();
+            }
+        }
+
+        function updateCart() {
+            let newstr = "";
+            cart = JSON.parse(localStorage.getItem("cart"));
+            Total = JSON.parse(localStorage.getItem("Total"));
+
+            
+            if (cart==null || Total == null){
+                cart = [];
+                Total = 0;
+            }
+            if(cart.length == 0){
+
+                document.getElementById("clearcart").style.display = "none";
+            }
+            else{
+                document.getElementById("clearcart").style.display = "block";
+
+            }
+            
+            document.querySelector('.cartlen').innerHTML = cart.length;
+            document.querySelector('#Total').innerHTML = Total;
+
+            cart.forEach((data , index)=>(
+                newstr = newstr + `
+                <li class="d-flex justify-content-between mb-1">${data.name} - price ${data.price} <div> <button class="btn btn-primary" onclick="increment(${index},${data.price} , ${data.qty})"> + </button><span> ${data.qty} </span> <button
+                                class="btn btn-primary" onclick="decrement(${index} , ${data.price}, ${data.qty})">-</button></div></li>
+                `
+            ))
+            document.querySelector("ol").innerHTML = newstr;
+        }
+
+        function increment(index , price , qty){
+            cart = JSON.parse(localStorage.getItem("cart"));
+            Total = JSON.parse(localStorage.getItem("Total"));
+            cart[index].qty = cart[index].qty +1;
+            Total = Total + cart[index].price ;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            localStorage.setItem("Total", JSON.stringify(Total));
+
+            updateCart();
+        }
+
+        function decrement(index , price , qty){
+            cart = JSON.parse(localStorage.getItem("cart"));
+            Total = JSON.parse(localStorage.getItem("Total"));
+            
+            if(cart[index].qty == 1){
+                Total = Total - cart[index].price ;
+                cart.splice(index , 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                localStorage.setItem("Total", JSON.stringify(Total));
+                updateCart();
+            }
+            else{
+                
+                cart[index].qty = cart[index].qty -1;
+                Total = Total - cart[index].price ;
+                localStorage.setItem("cart", JSON.stringify(cart));
+                localStorage.setItem("Total", JSON.stringify(Total));
+                updateCart();
+            }
+        }
+
+        function clearcart(){
+            localStorage.removeItem("cart");
+            localStorage.removeItem("Total");
+            updateCart();
+        }
+
+        updateCart();
+    </script>
+</body>
+
+</html>
